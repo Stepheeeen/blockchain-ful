@@ -6,6 +6,6 @@
     {"offset": {"line": 97, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
     {"offset": {"line": 103, "column": 0}, "map": {"version":3,"sources":["turbopack://[project]/src/pages/_app.tsx"],"sourcesContent":["import \"@/styles/globals.css\";\nimport type { AppProps } from \"next/app\";\n\nexport default function App({ Component, pageProps }: AppProps) {\n  return <Component {...pageProps} />;\n}\n"],"names":[],"mappings":";;;;;;AAGe,SAAS,IAAI,EAAE,SAAS,EAAE,SAAS,EAAY;IAC5D,qBAAO,uIAAC;QAAW,GAAG,SAAS;;;;;;AACjC"}},
     {"offset": {"line": 118, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
-    {"offset": {"line": 124, "column": 0}, "map": {"version":3,"sources":["turbopack://[project]/src/pages/index.tsx"],"sourcesContent":["import React from 'react';\n\nconst index = () => {\n  return (\n    <div>\n      \n    </div>\n  );\n}\n\nexport default index;\n"],"names":[],"mappings":";;;;;AAEA,MAAM,QAAQ;IACZ,qBACE,uIAAC;;;;;AAIL;uCAEe"}},
-    {"offset": {"line": 137, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+    {"offset": {"line": 124, "column": 0}, "map": {"version":3,"sources":["turbopack://[project]/src/pages/index.tsx"],"sourcesContent":["import Navbar from \"@/components/navbar\";\nimport React from \"react\";\n\nconst index = () => {\n  return (\n    <div>\n      <Navbar />\n    </div>\n  );\n};\n\nexport default index;\n"],"names":[],"mappings":";;;;AAAA;;;AAGA,MAAM,QAAQ;IACZ,qBACE,uIAAC;kBACC,cAAA,uIAAC,qHAAA,CAAA,UAAM;;;;;;;;;;AAGb;uCAEe"}},
+    {"offset": {"line": 145, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
 }
