@@ -8,12 +8,16 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["DM Sans", "sans-serif"], // Add DM Sans as the default sans font
+      },
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        background: "var(--background)", // Custom background color variable
+        foreground: "var(--foreground)", // Custom foreground color variable
       },
     },
   },
   plugins: [],
 };
+
 export default config;
