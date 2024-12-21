@@ -1,7 +1,7 @@
 (globalThis.TURBOPACK = globalThis.TURBOPACK || []).push([
-    "static/chunks/src_pages_index_c0f33b._.js",
+    "static/chunks/src_pages_index_3bce7b._.js",
     {},
-    {"otherChunks":["static/chunks/node_modules_next_2430e2._.js","static/chunks/node_modules_react-dom_82bb97._.js","static/chunks/node_modules_1b7400._.js","static/chunks/[root of the server]__745b8c._.js"],"runtimeModuleIds":["[project]/node_modules/next/dist/compiled/@next/react-refresh-utils/dist/runtime.js [client] (ecmascript)","[project]/node_modules/next/dist/client/next-dev-turbopack.js [client] (ecmascript)","[project]/src/pages/index (hmr-entry)"]}
+    {"otherChunks":["static/chunks/node_modules_next_2430e2._.js","static/chunks/node_modules_react-dom_82bb97._.js","static/chunks/node_modules_1b7400._.js","static/chunks/[root of the server]__b148db._.js"],"runtimeModuleIds":["[project]/node_modules/next/dist/compiled/@next/react-refresh-utils/dist/runtime.js [client] (ecmascript)","[project]/node_modules/next/dist/client/next-dev-turbopack.js [client] (ecmascript)","[project]/src/pages/index (hmr-entry)"]}
 ]);
 (() => {
 if (!Array.isArray(globalThis.TURBOPACK)) {
@@ -1648,4 +1648,4 @@ chunksToRegister.forEach(registerChunk);
 })();
 
 
-//# sourceMappingURL=src_pages_index_c0f33b._.js.map
+//# sourceMappingURL=src_pages_index_3bce7b._.js.map
