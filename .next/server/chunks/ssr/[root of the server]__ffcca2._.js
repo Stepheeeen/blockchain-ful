@@ -264,9 +264,9 @@ const Navbar = ()=>{
                         viewBox: "0 0 24 24",
                         fill: "none",
                         stroke: "currentColor",
-                        "stroke-width": "2",
-                        "stroke-linecap": "round",
-                        "stroke-linejoin": "round",
+                        strokeWidth: "2",
+                        strokeLinecap: "round",
+                        strokeLinejoin: "round",
                         className: "lucide lucide-chevron-right",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("path", {
                             d: "m9 18 6-6-6-6"
