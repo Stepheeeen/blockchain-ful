@@ -112,6 +112,7 @@ const TestimonialCard = ({ quote, author, role }:any) => (
   </div>
 );
 
+
 const StatCard = ({ number, label }:any) => (
   <div className="p-8 rounded-xl bg-gray-800/50 border border-gray-700">
     <p className="text-4xl font-bold mb-2 bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text text-transparent">
