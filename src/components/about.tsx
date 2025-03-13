@@ -21,11 +21,11 @@ const About = () => {
           <div className="absolute w-96 h-96 bg-purple-500/20 rounded-full blur-3xl -top-10 -right-10 animate-pulse" />
         </div>
 
-        <div className="relative z-10 max-w-4xl mx-auto text-center">
-          <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text text-transparent">
+        <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text text-transparent">
             About BLOCKCHAINFUL
           </h1>
-          <p className="text-xl text-gray-300">
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed">
             BlockchainFUL is dedicated to fostering education, innovation, and
             collaboration within the Web3 ecosystem. Through hands-on workshops,
             hackathons, structured mentorship programs, and active community

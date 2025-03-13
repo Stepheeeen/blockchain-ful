@@ -149,41 +149,42 @@ const Teams = () => {
       </section>
 
       {/* Join Us Section */}
-      <section className="py-24 px-4 bg-gray-900/50">
-        <div className="max-w-4xl mx-auto text-center flex flex-col gap-y-14">
+      <section className="py-20 sm:py-24 px-4 bg-gray-900/50">
+        <div className="max-w-5xl mx-auto flex flex-col gap-y-20 text-center">
+          {/* Join Community Section */}
           <div>
-            <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text text-transparent">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text text-transparent">
               Join the BLOCKCHAINFUL Community!
             </h2>
-            <p className="text-gray-300 mb-8">
+            <p className="text-base sm:text-lg text-gray-300 mb-6 sm:mb-8 max-w-2xl mx-auto">
               Be part of a visionary movement driving blockchain adoption and
               innovation. Whether you’re a beginner, developer, or industry
               expert, there's a place for you in our community.
             </p>
-            <button className="group bg-gradient-to-r from-purple-500 to-blue-500 px-8 py-3 rounded-lg font-semibold flex items-center gap-2 hover:opacity-90 transition-all mx-auto">
+            <button className="group bg-gradient-to-r from-purple-500 to-blue-500 px-6 sm:px-8 py-3 rounded-lg font-semibold flex items-center gap-2 hover:opacity-90 transition-all mx-auto text-white">
               Join Us Now
-              <ArrowRight className="group-hover:rotate-12 transition-transform" />
+              <ArrowRight className="w-5 h-5 group-hover:rotate-12 transition-transform" />
             </button>
           </div>
+
+          {/* Partner Section */}
           <div>
-            <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text text-transparent">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text text-transparent">
               Partner With Us
             </h2>
-            <p className="text-gray-300 mb-8">
+            <p className="text-base sm:text-lg text-gray-300 mb-6 sm:mb-8 max-w-2xl mx-auto">
               Have questions, ideas, or want to collaborate with BLOCKCHAINFUL?
-              We’d love to hear from you as We welcome partnerships with
+              We’d love to hear from you. We welcome partnerships with
               organizations, industry leaders, and innovators looking to shape
               the future of blockchain.
             </p>
-            <button>
-              <Link
-                href={"mailto:blockchainful@gmail.com"}
-                className="group bg-gradient-to-r from-purple-500 to-blue-500 px-8 py-3 rounded-lg font-semibold flex items-center gap-2 hover:opacity-90 transition-all mx-auto"
-              >
-                Email Us
-                <Mail className="group-hover:rotate-12 transition-transform" />
-              </Link>
-            </button>
+            <Link
+              href="mailto:blockchainful@gmail.com"
+              className="group bg-gradient-to-r from-purple-500 to-blue-500 px-6 sm:px-8 py-3 rounded-lg font-semibold flex items-center gap-2 hover:opacity-90 transition-all mx-auto text-white"
+            >
+              Email Us
+              <Mail className="w-5 h-5 group-hover:rotate-12 transition-transform" />
+            </Link>
           </div>
         </div>
       </section>
