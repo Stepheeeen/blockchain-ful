@@ -179,8 +179,8 @@ const Navbar = () => {
             onClick={handleWalletConnect}
             className="w-full mt-4 flex items-center justify-center gap-2 px-4 py-2 rounded-lg font-medium bg-gradient-to-r from-purple-500 to-blue-500 text-white"
           >
-            <Wallet className="w-4 h-4" />
-            Connect Wallet
+            <p>Join Us</p>
+            <ChevronRight className="w-4 h-4" />
           </button>
         </div>
       </div>
