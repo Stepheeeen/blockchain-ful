@@ -3,44 +3,48 @@ import { ChevronRight, Wallet, Menu, X } from "lucide-react";
 import Logo from "../../public/Logo.png";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [walletConnected, setWalletConnected] = useState(false);
   const [activeSection, setActiveSection] = useState("");
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
-  
+
       const sections = document.querySelectorAll<HTMLElement>("section[id]");
       let currentSection = "";
-  
+
       sections.forEach((section) => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
-        if (window.scrollY >= sectionTop - 150 && window.scrollY < sectionTop + sectionHeight - 150) {
+        if (
+          window.scrollY >= sectionTop - 150 &&
+          window.scrollY < sectionTop + sectionHeight - 150
+        ) {
           currentSection = section.getAttribute("id") || "";
         }
       });
-  
+
       // Explicitly handle Home section
       if (window.scrollY === 0) {
         currentSection = "";
       }
-  
+
       if (currentSection !== activeSection) {
         setActiveSection(currentSection);
       }
     };
-  
+
     window.addEventListener("scroll", handleScroll);
     handleScroll();
-  
+
     return () => window.removeEventListener("scroll", handleScroll);
   }, [activeSection]);
-  
 
   const navItems = [
     { name: "Home", path: "#" },
@@ -106,7 +110,7 @@ const Navbar = () => {
                   href={item.path}
                   onClick={(e) => handleNavClick(e, item.path)}
                   className={`${
-                    activeSection === item.path.slice(1)
+                    activeSection === item.path.replace("#", "")
                       ? "text-purple-400"
                       : "text-gray-300 hover:text-white"
                   } px-3 py-2 text-md font-medium transition-colors duration-200`}
@@ -162,7 +166,7 @@ const Navbar = () => {
               href={item.path}
               onClick={(e) => handleNavClick(e, item.path)}
               className={`${
-                activeSection === item.path.slice(1) ||
+                pathname === item.path ||
                 (item.path === "#" && activeSection === "")
                   ? "text-purple-400"
                   : "text-gray-300"

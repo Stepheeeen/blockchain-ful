@@ -7,11 +7,19 @@ import {
   Award,
   BookOpen,
   Code,
+  ArrowBigRight,
+  Mail,
+  ChevronRight,
+  ArrowRight,
 } from "lucide-react";
+import Link from "next/link";
 
 const Teams = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white" id="teams">
+    <div
+      className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white"
+      id="teams"
+    >
       {/* Hero Section */}
       <section className="relative py-24 px-4">
         <div className="absolute inset-0 overflow-hidden">
@@ -24,7 +32,8 @@ const Teams = () => {
             Meet Our Team
           </h1>
           <p className="text-xl text-gray-300">
-            Passionate builders and innovators shaping the future of Web3
+            At BLOCKCHAINFUL, we’re driven by a passionate team dedicated to
+            making Web3 knowledge accessible to everyone.
           </p>
         </div>
       </section>
@@ -36,33 +45,57 @@ const Teams = () => {
             Core Team
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
-            <TeamMemberCard
-              name="Jane.eth"
-              role="Founder & CEO"
-              image="/api/placeholder/150/150"
-              bio="Blockchain pioneer with 10+ years in Web3"
-              skills={["Strategy", "Leadership", "Tokenomics"]}
-              github="janedoe"
-              twitter="janedoe"
-            />
-            <TeamMemberCard
-              name="0xJohn"
-              role="CTO"
-              image="/api/placeholder/150/150"
-              bio="Former lead developer at Ethereum Foundation"
-              skills={["Smart Contracts", "Architecture", "Security"]}
-              github="johnsmith"
-              twitter="0xjohn"
-            />
-            <TeamMemberCard
-              name="em1ly.lens"
-              role="CMO"
-              image="/api/placeholder/150/150"
-              bio="Marketing veteran specializing in Web3 growth"
-              skills={["Growth", "Community", "Brand"]}
-              github="emilydavis"
-              twitter="em1ly"
-            />
+            {[
+              {
+                name: "Raji Rufai",
+                role: "Founder & Visionary",
+                bio: "Leads the mission to create a thriving Web3 learning ecosystem.",
+              },
+              {
+                name: "Joseph Ojochegbe (Dev Praise)",
+                role: " Community Lead",
+                bio: " Oversees engagement, ensuring inclusivity and dynamic collaboration.",
+              },
+              {
+                name: "Ukolojo Lucky",
+                role: " Community Manager",
+                bio: " Fosters engagement and organizes community activities.",
+              },
+              {
+                name: "Stephen Onucheyo",
+                role: "Development Team Lead",
+                bio: "Heads technical innovations and smart contract development.",
+              },
+              {
+                name: "DecenToria",
+                role: "Content Team Lead",
+                bio: "Generally officiates all BlockchainFUL contents",
+              },
+              {
+                name: "Favour Aroniyo",
+                role: "Lead Video Creator",
+                bio: "Simplifies blockchain concepts through educational video content.",
+              },
+              {
+                name: "Tenuojo Odokina",
+                role: "Lead Content Writer",
+                bio: "Creates high-quality content to drive awareness and understanding of Web3 technologies.",
+              },
+              {
+                name: "Olarenwaju Celebrity Rejoice",
+                role: "Graphics Designer",
+                bio: "Enhances branding and community engagement through captivating visuals.",
+              },
+            ].map((item) => (
+              <TeamMemberCard
+                name={item.name}
+                role={item.role}
+                image="/api/placeholder/150/150"
+                bio={item.bio}
+                skills={[]}
+                twitter=""
+              />
+            ))}
           </div>
         </div>
       </section>
@@ -74,24 +107,33 @@ const Teams = () => {
             Department Leads
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
-            <LeadCard
-              icon={<Code className="w-8 h-8" />}
-              title="Development"
-              name="alex.eth"
-              description="Leading our protocol development"
-            />
-            <LeadCard
-              icon={<Users className="w-8 h-8" />}
-              title="Community"
-              name="sarah.lens"
-              description="Managing community growth and engagement"
-            />
-            <LeadCard
-              icon={<BookOpen className="w-8 h-8" />}
-              title="Research"
-              name="0xMark"
-              description="Driving blockchain innovation research"
-            />
+            {[
+              {
+                icon: <Code className="w-8 h-8" />,
+                name: "Stephen Onucheyo",
+                title: "Development",
+                bio: "Heads technical innovations and smart contract development.",
+              },
+              {
+                icon: <Users className="w-8 h-8" />,
+                name: "Joseph Ojochegbe (Dev Praise)",
+                title: " Community",
+                bio: " Oversees engagement, ensuring inclusivity and dynamic collaboration.",
+              },
+              {
+                icon: <Globe className="w-8 h-8" />,
+                name: "DecenToria",
+                title: "Content",
+                bio: "Generally officiates all BlockchainFUL contents",
+              },
+            ].map((item) => (
+              <LeadCard
+                icon={item.icon}
+                title={item.title}
+                name={item.name}
+                description={item.bio}
+              />
+            ))}
           </div>
         </div>
       </section>
@@ -108,34 +150,49 @@ const Teams = () => {
 
       {/* Join Us Section */}
       <section className="py-24 px-4 bg-gray-900/50">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text text-transparent">
-            Join Our Team
-          </h2>
-          <p className="text-gray-300 mb-8">
-            We're always looking for passionate individuals to join our mission
-            of building the decentralized future.
-          </p>
-          <button className="group bg-gradient-to-r from-purple-500 to-blue-500 px-8 py-3 rounded-lg font-semibold flex items-center gap-2 hover:opacity-90 transition-all mx-auto">
-            View Open Positions
-            <Award className="group-hover:rotate-12 transition-transform" />
-          </button>
+        <div className="max-w-4xl mx-auto text-center flex flex-col gap-y-14">
+          <div>
+            <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text text-transparent">
+              Join the BLOCKCHAINFUL Community!
+            </h2>
+            <p className="text-gray-300 mb-8">
+              Be part of a visionary movement driving blockchain adoption and
+              innovation. Whether you’re a beginner, developer, or industry
+              expert, there's a place for you in our community.
+            </p>
+            <button className="group bg-gradient-to-r from-purple-500 to-blue-500 px-8 py-3 rounded-lg font-semibold flex items-center gap-2 hover:opacity-90 transition-all mx-auto">
+              Join Us Now
+              <ArrowRight className="group-hover:rotate-12 transition-transform" />
+            </button>
+          </div>
+          <div>
+            <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text text-transparent">
+              Partner With Us
+            </h2>
+            <p className="text-gray-300 mb-8">
+              Have questions, ideas, or want to collaborate with BLOCKCHAINFUL?
+              We’d love to hear from you as We welcome partnerships with
+              organizations, industry leaders, and innovators looking to shape
+              the future of blockchain.
+            </p>
+            <button>
+              <Link
+                href={"mailto:blockchainful@gmail.com"}
+                className="group bg-gradient-to-r from-purple-500 to-blue-500 px-8 py-3 rounded-lg font-semibold flex items-center gap-2 hover:opacity-90 transition-all mx-auto"
+              >
+                Email Us
+                <Mail className="group-hover:rotate-12 transition-transform" />
+              </Link>
+            </button>
+          </div>
         </div>
       </section>
     </div>
   );
 };
 
-const TeamMemberCard = ({
-  name,
-  role,
-  image,
-  bio,
-  skills,
-  github,
-  twitter,
-}: any) => (
-  <div className="p-6 rounded-xl bg-gray-800/50 border border-gray-700 hover:border-purple-500/50 transition-all group">
+const TeamMemberCard = ({ name, role, image, bio, skills, twitter }: any) => (
+  <div className="p-6 rounded-xl bg-gray-800/50 border border-gray-700 hover:border-purple-500/50 transition-all group text-center">
     <img
       src={image}
       alt={name}
@@ -155,12 +212,6 @@ const TeamMemberCard = ({
       ))}
     </div>
     <div className="flex justify-center gap-4">
-      <a
-        href={`https://github.com/${github}`}
-        className="text-gray-400 hover:text-purple-400 transition-colors"
-      >
-        <Github className="w-5 h-5" />
-      </a>
       <a
         href={`https://twitter.com/${twitter}`}
         className="text-gray-400 hover:text-purple-400 transition-colors"

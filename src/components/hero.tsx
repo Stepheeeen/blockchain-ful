@@ -1,5 +1,14 @@
-import React from 'react';
-import { Globe, Users, Shield, Sparkles, ArrowRight } from 'lucide-react';
+import React from "react";
+import {
+  Globe,
+  Users,
+  Shield,
+  Sparkles,
+  ArrowRight,
+  AudioLines,
+  BadgeCheck,
+} from "lucide-react";
+import Link from "next/link";
 
 const Home = () => {
   return (
@@ -11,14 +20,18 @@ const Home = () => {
           <div className="absolute w-96 h-96 bg-purple-500/20 rounded-full blur-3xl -top-10 -left-10 animate-pulse" />
           <div className="absolute w-96 h-96 bg-blue-500/20 rounded-full blur-3xl -bottom-10 -right-10 animate-pulse" />
         </div>
-        
+
         {/* Content */}
         <div className="relative z-10 text-center max-w-4xl">
           <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text text-transparent">
-            Web3 Community Hub
+            EMPOWERING A VISIONARY FUTURE THROUGH BLOCKCHAIN LITERACY
           </h1>
           <p className="text-xl mb-8 text-gray-300">
-            Join the decentralized revolution. Connect, collaborate, and create the future of the web together.
+            Join a thriving community dedicated to blockchain adoption,
+            cryptocurrency education, and the future of AI & NFTs. Whether
+            you're a beginner or a builder, we provide free learning and
+            hands-on opportunities to grow in Web3. Ready to be part of the
+            future?
           </p>
           <div className="flex gap-4 justify-center">
             <button className="group bg-gradient-to-r from-purple-500 to-blue-500 px-8 py-3 rounded-lg font-semibold flex items-center gap-2 hover:opacity-90 transition-all">
@@ -26,7 +39,7 @@ const Home = () => {
               <ArrowRight className="group-hover:translate-x-1 transition-transform" />
             </button>
             <button className="px-8 py-3 rounded-lg font-semibold border border-gray-700 hover:bg-gray-800 transition-all">
-              Learn More
+              <Link href={"#about"}>Learn More</Link>
             </button>
           </div>
         </div>
@@ -36,23 +49,13 @@ const Home = () => {
       <section className="py-24 px-4 bg-gray-900/50">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold mb-16 text-center bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text text-transparent">
-            Why Join Our Community
+            WHY JOIN OUR COMMUNITY?
           </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <FeatureCard 
-              icon={<Globe className="w-8 h-8" />}
-              title="Decentralized Network"
-              description="Connect with like-minded individuals in a truly decentralized ecosystem powered by blockchain technology."
-            />
-            <FeatureCard 
-              icon={<Users className="w-8 h-8" />}
-              title="Active Community"
-              description="Engage with passionate Web3 enthusiasts, developers, and creators in our vibrant community."
-            />
-            <FeatureCard 
-              icon={<Shield className="w-8 h-8" />}
-              title="Secure Platform"
-              description="Built with cutting-edge blockchain security to ensure your assets and data remain protected."
+          <div className="grid place-items-center gap-8">
+            <FeatureCard
+              icon={<BadgeCheck className="w-8 h-8" />}
+              title="Membership Levels"
+              description="BlockchainFUL is made up of passionate individuals at different levels of engagement. Community Members actively learn, connect, and grow in a vibrant blockchain space. High Council Members play a key role in guiding initiatives and decision-making. Team Members are the driving force behind BlockchainFUL’s mission and innovation, ensuring continuous growth and impact."
             />
           </div>
         </div>
@@ -65,15 +68,26 @@ const Home = () => {
             Community Voices
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
-            <TestimonialCard 
-              quote="Being part of this Web3 community has opened up incredible opportunities for collaboration and growth."
-              author="Alex.eth"
-              role="DeFi Developer"
+            <TestimonialCard
+              quote="BlockchainFUL is a life-changing community! I secured my first
+              ambassador role and learned social media & community management;
+              all for free!. This space is truly empowering!"
+              author="@IRepLight"
+              role=""
             />
-            <TestimonialCard 
-              quote="The support and knowledge sharing in this community is unmatched. It's where Web3 innovation happens."
-              author="CryptoNinja"
-              role="NFT Artist"
+            <TestimonialCard
+              quote="The BLOCKCHAINFUL CONFERENCE and CRYPTO PAYMENT FESTIVAL
+              were game-changers! I’ve learned so much, met amazing people, and
+              had the chance to contribute to impactful projects."
+              author="@unekwuojo_tweets"
+              role=""
+            />
+            <TestimonialCard
+              quote="Joining BlockchainFUL felt like joining a family. The
+              support, learning, and opportunities here are unmatched. I can’t
+              wait to see where we go from here!"
+              author="@only_bukolaa"
+              role=""
             />
           </div>
         </div>
@@ -91,8 +105,11 @@ const Home = () => {
   );
 };
 
-const FeatureCard = ({ icon, title, description }:any) => (
-  <div className="p-8 rounded-xl bg-gray-800/50 border border-gray-700 hover:border-purple-500/50 transition-all group" id='#'>
+const FeatureCard = ({ icon, title, description }: any) => (
+  <div
+    className="p-8 rounded-xl bg-gray-800/50 border border-gray-700 hover:border-purple-500/50 transition-all group"
+    id="#"
+  >
     <div className="mb-4 text-purple-400 group-hover:scale-110 transition-transform">
       {icon}
     </div>
@@ -101,9 +118,9 @@ const FeatureCard = ({ icon, title, description }:any) => (
   </div>
 );
 
-const TestimonialCard = ({ quote, author, role }:any) => (
+const TestimonialCard = ({ quote, author, role }: any) => (
   <div className="p-8 rounded-xl bg-gray-800/50 border border-gray-700">
-    <Sparkles className="w-8 h-8 text-purple-400 mb-4" />
+    <AudioLines className="w-8 h-8 text-purple-400 mb-4" />
     <p className="text-lg mb-6 text-gray-300">{quote}</p>
     <div>
       <p className="font-bold">{author}</p>
@@ -112,8 +129,7 @@ const TestimonialCard = ({ quote, author, role }:any) => (
   </div>
 );
 
-
-const StatCard = ({ number, label }:any) => (
+const StatCard = ({ number, label }: any) => (
   <div className="p-8 rounded-xl bg-gray-800/50 border border-gray-700">
     <p className="text-4xl font-bold mb-2 bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text text-transparent">
       {number}
