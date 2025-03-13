@@ -22,25 +22,27 @@ const Home = () => {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 text-center max-w-4xl">
-          <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text text-transparent">
+        <div className="relative z-10 text-center max-w-5xl mx-auto px-4 py-20 sm:py-24">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text text-transparent leading-tight sm:leading-snug">
             EMPOWERING A VISIONARY FUTURE THROUGH BLOCKCHAIN LITERACY
           </h1>
-          <p className="text-xl mb-8 text-gray-300">
+          <p className="text-base sm:text-lg md:text-xl mb-8 text-gray-300 max-w-3xl mx-auto">
             Join a thriving community dedicated to blockchain adoption,
             cryptocurrency education, and the future of AI & NFTs. Whether
             you're a beginner or a builder, we provide free learning and
             hands-on opportunities to grow in Web3. Ready to be part of the
             future?
           </p>
-          <div className="flex gap-4 justify-center">
-            <button className="group bg-gradient-to-r from-purple-500 to-blue-500 px-8 py-3 rounded-lg font-semibold flex items-center gap-2 hover:opacity-90 transition-all">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="group bg-gradient-to-r from-purple-500 to-blue-500 px-6 sm:px-8 py-3 rounded-lg font-semibold flex items-center justify-center gap-2 hover:opacity-90 transition-all text-white">
               Connect Wallet
-              <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
-            <button className="px-8 py-3 rounded-lg font-semibold border border-gray-700 hover:bg-gray-800 transition-all">
-              <Link href={"#about"}>Learn More</Link>
-            </button>
+            <Link href="#about">
+              <button className="px-6 sm:px-8 py-3 rounded-lg font-semibold border border-gray-700 hover:bg-gray-800 transition-all text-white">
+                Learn More
+              </button>
+            </Link>
           </div>
         </div>
       </section>
