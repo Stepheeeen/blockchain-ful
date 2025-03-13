@@ -178,13 +178,15 @@ const Teams = () => {
               organizations, industry leaders, and innovators looking to shape
               the future of blockchain.
             </p>
-            <Link
-              href="mailto:blockchainful@gmail.com"
-              className="group bg-gradient-to-r from-purple-500 to-blue-500 px-6 sm:px-8 py-3 rounded-lg font-semibold flex items-center gap-2 hover:opacity-90 transition-all mx-auto text-white"
-            >
-              Email Us
-              <Mail className="w-5 h-5 group-hover:rotate-12 transition-transform" />
-            </Link>
+            <button>
+              <Link
+                href="mailto:blockchainful@gmail.com"
+                className="group bg-gradient-to-r from-purple-500 to-blue-500 px-6 sm:px-8 py-3 rounded-lg font-semibold flex items-center gap-2 hover:opacity-90 transition-all mx-auto text-white"
+              >
+                Email Us
+                <Mail className="w-5 h-5 group-hover:rotate-12 transition-transform" />
+              </Link>
+            </button>
           </div>
         </div>
       </section>
